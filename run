@@ -1,8 +1,3 @@
 #!/bin/bash
 
-GCLOUD_SERVICE_ACCOUNT=$(cat /opt/gcloud/account.txt)
-GCLOUD_PROJECT=$(cat /opt/gcloud/project_id.txt)
-
-gcloud auth activate-service-account $GCLOUD_SERVICE_ACCOUNT --key-file /opt/gcloud/privkey.json &&
-gcloud config set project $GCLOUD_PROJECT &&
-/bin/bash
+/bin/gcloud_auth && /bin/bash
